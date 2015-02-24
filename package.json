@@ -46,7 +46,8 @@
     "ember-export-application-global": "^1.0.0",
     "ember-insights": "0.0.1",
     "express": "^4.8.5",
-    "glob": "^4.0.5"
+    "glob": "^4.0.5",
+    "request": "^2.53.0"
   },
   "dependencies": {
     "ember-inflector-node-shim": "git://github.com/manuelmitasch/ember-inflector-node-shim",
