@@ -1,0 +1,48 @@
+<h1>Bloques list</h1>
+
+<p>
+  {{link-to "New Bloque" "bloques.new" }}
+</p>
+
+{{#if controller.length}}
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Nombre
+        </th>
+       <th>
+          Camara
+        </th>
+        <th colspan="3">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each bloque in controller}}
+        <tr>
+          <td>
+            {{bloque.nombre}}
+          </td>         
+          <td>
+            {{bloque.tipocamara}}
+          </td>
+          <td>
+            {{link-to "Edit" "bloques.edit" bloque}}
+          </td>
+          <td>
+            {{link-to "Show" "bloques.show" bloque}}
+          </td>
+          <td>
+            <a href="#" {{action "remove" bloque}}>Remove</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p id="blankslate">
+    No Bloques found
+  </p>
+{{/if}}

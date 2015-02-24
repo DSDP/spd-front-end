@@ -1,0 +1,12 @@
+{
+  "name": "sparl-core",
+  "description": "Small description for sparl-core goes here",
+  "version": "0.0.0",
+  "options": {
+    "paths": [
+      "app"
+    ],
+    "exclude": "vendor",
+    "outdir": "docs"
+  }
+}

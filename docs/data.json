@@ -1,0 +1,46 @@
+{
+    "project": {
+        "name": "sparl-core",
+        "description": "Small description for sparl-core goes here",
+        "version": "0.0.0"
+    },
+    "files": {
+        "app/app.js": {
+            "name": "app/app.js",
+            "modules": {},
+            "classes": {
+                "App": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "App": {
+            "name": "App",
+            "shortname": "App",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/app.js",
+            "line": 8,
+            "description": "Application constructor",
+            "is_constructor": 1
+        }
+    },
+    "classitems": [
+        {
+            "file": "app/app.js",
+            "line": 15,
+            "itemtype": "property",
+            "name": "modulePrefix",
+            "type": "{Object}",
+            "default": "config.modulePrefix",
+            "class": "App"
+        }
+    ],
+    "warnings": []
+}
