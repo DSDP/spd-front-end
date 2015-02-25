@@ -1,0 +1,7 @@
+{{input value=filterQuery placeholder=placeholder}}
+{{page-size perPage=perPage}}
+<ul {{bindAttr class=listClass}}>
+  {{#each listFilterObject in filteredList}}
+    {{partial partial}}
+  {{/each}}
+</ul>

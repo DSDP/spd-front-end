@@ -20,8 +20,7 @@ export default Ember.ArrayController.extend({
   }.observes('perPage'),
 
   pages: function () {
-    console.log('pepe');
     return Math.ceil(this.get('totalPages') / this.get('perPage'));
   }.property('totalPages', 'total', 'perPage'),
-  
+
 });
