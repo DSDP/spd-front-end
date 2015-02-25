@@ -15,7 +15,13 @@ export default Ember.ArrayController.extend({
   page: 1,
   perPage: 5,
 
+  perPageChanged: function () {
+    this.set('page', 1);
+  }.observes('perPage'),
+
   pages: function () {
-    return Math.floor(this.get('totalPages') / this.get('perPage'));
-  }.property('totalPages'),
+    console.log('pepe');
+    return Math.ceil(this.get('totalPages') / this.get('perPage'));
+  }.property('totalPages', 'total', 'perPage'),
+  
 });

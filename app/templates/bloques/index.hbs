@@ -5,8 +5,9 @@
 </p>
 
 {{#if controller.length}}
-  {{list-filter list=content partial='bloques/list-item' properties='nombre tipocamara'}}
+  {{page-size perPage=controller.perPage}}
   {{page-numbers content=content totalPages=pages}}
+  {{list-filter list=content partial='bloques/list-item' properties='nombre tipocamara'}}
 {{else}}
   <p id="blankslate">
     No Bloques found
