@@ -5,42 +5,8 @@
 </p>
 
 {{#if controller.length}}
-  <table>
-    <thead>
-      <tr>
-        <th>
-          Nombre
-        </th>
-       <th>
-          Camara
-        </th>
-        <th colspan="3">
-          Actions
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each bloque in controller}}
-        <tr>
-          <td>
-            {{bloque.nombre}}
-          </td>         
-          <td>
-            {{bloque.tipocamara}}
-          </td>
-          <td>
-            {{link-to "Edit" "bloques.edit" bloque}}
-          </td>
-          <td>
-            {{link-to "Show" "bloques.show" bloque}}
-          </td>
-          <td>
-            <a href="#" {{action "remove" bloque}}>Remove</a>
-          </td>
-        </tr>
-      {{/each}}
-    </tbody>
-  </table>
+  {{list-filter list=content partial='bloques/list-item' properties='nombre tipocamara'}}
+  {{page-numbers content=content totalPages=pages}}
 {{else}}
   <p id="blankslate">
     No Bloques found
