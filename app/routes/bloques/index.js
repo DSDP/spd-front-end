@@ -2,6 +2,15 @@ import Ember from 'ember';
 import RouteMixin from 'ember-cli-pagination/remote/route-mixin';
 
 export default Ember.Route.extend(RouteMixin, {
+  queryParams: {
+    nombre: {
+      refreshModel: true
+    },
+    tipo_camara: {
+      refreshModel: true
+    }
+  },
+
   actions: {
     remove: function(model) {
       if(confirm('Are you sure?')) {
