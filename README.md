@@ -1,3 +1,9 @@
+[![DSDP](http://dsdp.hcdn.gob.ar/img/logo_spd.png)](http://dsdp.hcdn.gob.ar)
+
+[![NPM](https://img.shields.io/npm/v/npm.svg)]
+[![BOWER](https://img.shields.io/bower/v/bootstrap.svg)]
+[![NODE](https://img.shields.io/node/v/gh-badges.svg)]
+
 # Sparl-core
 
 This README outlines the details of collaborating on this Ember application.
