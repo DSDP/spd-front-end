@@ -1,0 +1,15 @@
+<h1>Cargos list</h1>
+
+<p>
+  {{link-to "New Cargo" "cargos.new" }}
+</p>
+
+{{#if controller.length}}
+  {{page-numbers content=content totalPages=pages}}
+  {{input type="text" value=descripcion}}
+  {{list-filter list=content partial='cargos/list-item' properties='descripcion' perPage=controller.perPage}}
+{{else}}
+  <p id="blankslate">
+    No Cargos found
+  </p>
+{{/if}}
