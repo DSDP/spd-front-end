@@ -1,0 +1,126 @@
+
+// TO-DO
+// Crear el scss correspondiente al layout admin
+
+body {
+	padding-top: 80px;
+}
+
+.menu-wrap {
+	position: fixed;
+	z-index: 1001;
+	width: 300px;
+	height: calc(100vh - 80px );
+	font-size: 1.15em;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	background: #eee;
+	border-right: 1px solid #d3d9de;
+}
+
+.menu-nav {
+	background: none;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+
+
+	li {
+
+	}	
+
+	a {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		height: 50px;
+		line-height: 50px;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		color: #4e5359;
+		border-bottom: 1px solid #ccc;
+		font-size: 16px;
+		font-weight: 600;
+		padding: 3px 17px;
+		text-decoration: none;
+		-moz-transition: all 0.2s ease-out;
+	    -webkit-transition: all 0.2s ease-out;
+	    -o-transition: all 0.2s ease-out;
+	    transition: all 0.2s ease-out;
+
+		&:hover {
+			background: #f3f3f3;
+		}
+	}	
+}
+
+.content-wrap {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	-webkit-transform: translate3d(300px, 0, 0);
+	transform: translate3d(300px, 0, 0);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	overflow: hidden;
+	width: calc(100vw - 315px);
+	height: 100%;
+	padding: 56px 0 0 0;
+}
+
+.content {
+	padding: 0 0 0 30px;
+}
+
+.content-bar {
+	position: fixed;
+	display: block;
+	width: calc(100vw - 315px);
+	height: 56px;
+	border-bottom: 1px solid #f8f8f8;
+	background: #fff;
+	-webkit-transform: translate3d(300px, 0, 0);
+	z-index: 1;
+	padding: 0;
+}
+
+.breadcrumb {
+	display: block;
+	margin: 0;
+	padding: 15px 0 0 15px;
+
+	li {
+		display: inline-block;
+
+		a {
+			padding: 1em;
+			color: #3ccef0;
+			text-decoration: none;
+		}
+
+		&:after {
+			content: ">";
+			color: #888;
+		}
+
+		&:last-child:after {
+			content: ""
+		}
+	}
+}
+
+.action-bar {
+	display: block;
+	position: absolute;
+	right: 25px;
+	top: 0;
+
+	p {
+		margin: 6px 0 0 0;
+		font-size: 12px;
+		font-family: $font-sans-caption;
+		color: #555;
+	}
+}

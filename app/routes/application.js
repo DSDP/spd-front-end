@@ -10,7 +10,7 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
 		  outlet: 'nav',      // {{outlet}} and {{outlet 'main' are synonymous}},
 		  view: 'nav',        // the view associated with the 'post' Route
 		  controller: 'nav',  // the controller associated with the 'post' Route
-		  model: model,
+		  model: model
 		})    	
   	},
 

@@ -1,0 +1,58 @@
+$brand-color: #00b4e1;
+
+header {
+	position: fixed;
+	z-index: 3;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: $brand-color;
+}
+
+.logo {
+	display: inline-block;
+	height: 60px;
+	margin: 10px 10px 10px 20px;
+	background: #3ccef0;
+	width: 60px;
+	border-radius: 100%;
+}
+
+.main-nav {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 80px;
+	overflow: auto;
+	text-align: right;
+
+	li {
+		display: inline-block;
+		height: 100%;
+		padding: 0 .4em;
+	}
+
+	a {
+		display: block;
+		padding: .9em 1em .9em 1em;
+		color: #fff;
+		text-decoration: none;
+		font-weight: 600;
+		cursor: pointer;
+		-moz-transition: all 0.2s ease-out;
+	    -webkit-transition: all 0.2s ease-out;
+	    -o-transition: all 0.2s ease-out;
+	    transition: all 0.2s ease-out;
+	    border-radius: 25px;
+	    border: 1px solid transparent;
+
+		&:hover {
+			border: 1px solid #3ccef0;
+			background-color: #3ccef0;
+		}
+	}
+
+}

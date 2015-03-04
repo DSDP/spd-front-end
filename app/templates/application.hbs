@@ -1,11 +1,41 @@
-{{#if session.isAuthenticated}}
-  <li><a {{ action 'invalidateSession' }}>Logout</a></li>
-{{else}}
-  <li>{{#link-to 'login'}}Login{{/link-to}}</li>
-{{/if}}
+<header>
+	<div class="logo">
+		
+	</div>
 
+	<nav class="main-nav-wrap">
+		<ul class="main-nav">
+			{{#if session.isAuthenticated}}
+			  <li><a {{ action 'invalidateSession' }}> <i class="fa fa-fw fa-lg fa-sign-out"></i> Logout</a></li>
+			{{else}}
+			  <li>{{#link-to 'login'}} <i class="fa fa-fw fa-lg fa-sign-in"></i> Login{{/link-to}}</li>
+			{{/if}}
+		</ul> <!-- main-nav -->
+	</nav><!-- main-nav-wrap -->
+</header>
 
-<div class="container">
+<div class="menu-wrap">
 	{{outlet nav}}
-	{{outlet main}}
+</div><!-- main-nav-wrap -->
+
+<div class="content-bar">
+	<ul class="breadcrumb">
+	  <li><a href="javascript:void(0)">One</a></li>
+	  <li><a href="javascript:void(0)">Two</a></li>
+	  <li><a href="javascript:void(0)">Three</a></li>
+	  <li><a href="javascript:void(0)">Four</a></li>
+	  <li><a href="javascript:void(0)">Five</a></li>
+	</ul>
+	<ul class="action-bar">
+		<p>
+			<i class="fa fa-plus"></i>
+			Nuevo bloque
+		</p>
+	</ul>
+</div>
+
+<div class="content-wrap">
+	<div class="content">
+		{{outlet main}}
+	</div>
 </div>

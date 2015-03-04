@@ -15,7 +15,8 @@
     "qunit": "~1.15.0",
     "ember-simple-auth": "0.7.2",
     "typeahead.js": "twitter/typeahead.js#0.10.5",
-    "jquery-ui-sortable": "*"
+    "jquery-ui-sortable": "*",
+    "hammerjs": "~2.0.4"
   },
   "resolutions": {
     "jquery": "~2.1.3"
