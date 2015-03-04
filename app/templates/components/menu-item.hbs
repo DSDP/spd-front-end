@@ -1,6 +1,6 @@
-{{#link-to model.link}} {{model.nombre}} {{/link-to}}
+{{#link-to model.link}} {{fa-icon model.icono size=1 fixedWidth=true}} {{model.nombre}}{{/link-to}}
 {{#if model.childs}}
-	<ul>
+	<ul class="menu-sub-nav fa-ul">
 	{{#each menuItem in model.childs}}
 		{{menu-item model=menuItem}}
 	{{/each}}

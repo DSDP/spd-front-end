@@ -9,6 +9,7 @@
   {{input type="text" value=nombre}}
   {{input type="text" value=tipo_camara}}
   {{list-filter list=content partial='bloques/list-item' properties='nombre tipocamara' perPage=controller.perPage}}
+  {{page-numbers content=content totalPages=pages}}
 {{else}}
   <p id="blankslate">
     No Bloques found

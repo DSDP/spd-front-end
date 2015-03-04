@@ -1,0 +1,92 @@
+// PT Sans
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,latin-ext);
+
+// PT Sans Narrow
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,latin-ext);
+
+// PT Sans Caption
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&subset=latin,latin-ext);
+
+// PT Serif
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic&subset=latin,latin-ext);
+
+// PT Serif Caption
+@import url(http://fonts.googleapis.com/css?family=PT+Serif+Caption:400,400italic&subset=latin,latin-ext);
+
+// PT Mono
+@import url(http://fonts.googleapis.com/css?family=PT+Mono&subset=latin,latin-ext);
+
+// Font Awesome
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+
+
+
+
+// Font Variables
+$font-sans: 'PT Sans', sans-serif;
+$font-sans-narrow: 'PT Sans Narrow', sans-serif;
+$font-sans-caption: 'PT Sans Caption', sans-serif;
+$font-serif: 'PT Serif', serif;
+$font-serif-caption: 'PT Serif Caption', serif;
+$font-mono: 'PT Mono', ;
+
+@import "header-nav";
+
+ol, ul {
+	list-style: none;
+}
+
+// Styles
+body {
+  font-family: $font-sans;
+  font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-sans-narrow;
+  font-weight: normal;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 26px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 22px;
+}
+
+p,
+ul,
+ol {
+    font-size: 16px;
+    line-height: 1.4em;
+}
+
+.content a {
+	font-family: $font-sans-caption;
+	font-size: 14px;
+}
+
+button {
+  font-family: $font-sans-caption;
+  font-weight: bold;
+}
+
+.login-form {
+
+}
