@@ -1,0 +1,60 @@
+<h1>Menuitems list</h1>
+
+<p>
+  {{link-to "New Menuitem" "menu-items.new" }}
+</p>
+
+{{#if controller.length}}
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Orden
+        </th>      
+        <th>
+          Nombre
+        </th>
+        <th>
+          Icono
+        </th>
+        <th>
+          Link
+        </th>
+        <th colspan="3">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each menuItem in controller}}
+        <tr>
+          <td>
+            {{menuItem.orden}}
+          </td>        
+          <td>
+            {{menuItem.nombre}}
+          </td>
+          <td>
+            {{menuItem.icono}}
+          </td>
+          <td>
+            {{menuItem.link}}
+          </td>
+          <td>
+            {{link-to "Edit" "menu-items.edit" menuItem}}
+          </td>
+          <td>
+            {{link-to "Show" "menu-items.show" menuItem}}
+          </td>
+          <td>
+            <a href="#" {{action "remove" menuItem}}>Remove</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p id="blankslate">
+    No Menuitems found
+  </p>
+{{/if}}

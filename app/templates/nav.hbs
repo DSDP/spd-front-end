@@ -1,0 +1,5 @@
+{{#each menuItem in controller}}
+	{{#unless menuItem.parent}}
+		{{menu-item model=menuItem}}
+	{{/unless}}
+{{/each}}

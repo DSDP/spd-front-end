@@ -1,0 +1,8 @@
+{{#link-to model.link}} {{model.nombre}} {{/link-to}}
+{{#if model.childs}}
+	<ul>
+	{{#each menuItem in model.childs}}
+		{{menu-item model=menuItem}}
+	{{/each}}
+	</ul>
+{{/if}}

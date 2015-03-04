@@ -19,7 +19,7 @@ module.exports = function(app) {
 
 
   app.use(apiPath, function (req, res, next) {
-  	if (req.headers.authorization) {
+  	if (req.headers.authorization ) {
   		var token = req.headers.authorization.split(' ')[1];
   		if (token) {
             require('request').get({
@@ -41,7 +41,10 @@ module.exports = function(app) {
   			res.send(403);
   		}
   	} else {
-  		res.send(403);
+      if (req.url == "/menuItems")
+        next();
+      else
+   		  res.send(403);
   	}
   });
 

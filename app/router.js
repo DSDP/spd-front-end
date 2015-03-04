@@ -6,6 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('menu-items', function() {
+    this.route('new');
+    this.route('edit', { path: ':menu-item_id/edit' });
+    this.route('show', { path: ':menu-item_id' });
+  });
   this.resource('cargos', function() {
     this.route('new');
     this.route('edit', { path: ':cargo_id/edit' });

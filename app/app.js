@@ -13,7 +13,6 @@ Ember.MODEL_FACTORY_INJECTIONS = true;
 */
 
 Ember.Inflector.inflector.irregular('perfil', 'perfiles');
-Ember.Inflector.inflector.irregular('moduloPerfil', 'modulosPerfiles');
 
 var App = Ember.Application.extend({
 	/**

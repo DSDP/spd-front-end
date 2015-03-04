@@ -1,0 +1,35 @@
+<form {{action "save" on="submit"}}>
+  <div>
+    <label>
+      Nombre
+      {{input type="text" value=nombre}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Icono
+      {{input type="text" value=icono}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Link
+      {{input type="text" value=link}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Orden
+      {{input type="text" value=orden}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Menu Padre
+      {{view "select" content=menuItems selection=parent optionLabelPath="content.nombre" prompt="Menu Padre"}}
+    </label>
+  </div>
+  <div>
+    <input type="submit" value="Save">
+  </div>
+</form>

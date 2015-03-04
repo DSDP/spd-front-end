@@ -1,0 +1,9 @@
+{"nombre":"Inicio","icono":"home","link":"index","orden":0,"parent":null,"_id":"WnvwhocpDTUnb1aR"}
+{"nombre":"Inicio","icono":"home","link":"index","orden":0,"parent":null,"_id":"WnvwhocpDTUnb1aR"}
+{"nombre":"About","icono":"about","link":"about","orden":1,"parent":null,"_id":"EFMYedSg08y0zGPn"}
+{"nombre":"Administracion","icono":"admin","link":"bloques.index","orden":3,"parent":null,"_id":"KveZeSu4U7YLIxxa"}
+{"nombre":"Bloques","icono":"bloques","link":"bloques.index","orden":0,"parent":"KveZeSu4U7YLIxxa","_id":"hesRc8QvFTncD1QR"}
+{"nombre":"Crear Bloque","icono":"crear-bloque","link":"bloques.new","orden":0,"parent":"hesRc8QvFTncD1QR","_id":"dTenPX1EDFv4jgge"}
+{"nombre":"Administracion","icono":"admin","link":"bloques.index","orden":2,"parent":null,"_id":"KveZeSu4U7YLIxxa"}
+{"nombre":"Cargos","icono":"cargo","link":"cargos.index","orden":1,"parent":"KveZeSu4U7YLIxxa","_id":"GKZ5bQawLVljFLsL"}
+{"nombre":"Crear Cargo","icono":"crear-cargo","link":"cargos.new","orden":0,"parent":"GKZ5bQawLVljFLsL","_id":"XPurH3URNS3nJwNU"}
