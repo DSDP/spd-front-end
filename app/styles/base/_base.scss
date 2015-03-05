@@ -1,25 +1,108 @@
-// PT Sans
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,latin-ext);
+@font-face {
+  font-family: 'PT Sans';
+  src:url('fonts/PT_Sans-Web-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 
-// PT Sans Narrow
-@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,latin-ext);
+@font-face {
+  font-family: 'PT Sans';
+  src:url('fonts/PT_Sans-Web-Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
 
-// PT Sans Caption
-@import url(http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&subset=latin,latin-ext);
+@font-face {
+  font-family: 'PT Sans';
+  src:url('fonts/PT_Sans-Web-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
 
-// PT Serif
-@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic&subset=latin,latin-ext);
+@font-face {
+  font-family: 'PT Sans';
+  src:url('fonts/PT_Sans-Web-BoldItalic.ttf');
+  font-weight: 700;
+  font-style: italic;
+}
 
-// PT Serif Caption
-@import url(http://fonts.googleapis.com/css?family=PT+Serif+Caption:400,400italic&subset=latin,latin-ext);
+@font-face {
+  font-family: 'PT Sans Caption';
+  src:url('fonts/PT_Sans-Caption-Web-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 
-// PT Mono
-@import url(http://fonts.googleapis.com/css?family=PT+Mono&subset=latin,latin-ext);
+@font-face {
+  font-family: 'PT Sans Caption';
+  src:url('fonts/PT_Sans-Caption-Web-Bold.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
 
-// Font Awesome
-@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+@font-face {
+  font-family: 'PT Sans Narrow';
+  src:url('fonts/PT_Sans-Narrow-Web-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Narrow';
+  src:url('fonts/PT_Sans-Narrow-Web-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
 
 
+@font-face {
+  font-family: 'PT Serif';
+  src:url('fonts/PT_Serif-Web-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src:url('fonts/PT_Serif-Web-Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src:url('fonts/PT_Serif-Web-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src:url('fonts/PT_Serif-Web-BoldItalic.ttf');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PT Serif Caption';
+  src:url('fonts/PT_Serif-Caption-Web-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Serif Caption';
+  src:url('fonts/PT_Serif-Caption-Web-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Mono';
+  src:url('fonts/PTM55FT.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 // Font Variables
@@ -89,4 +172,12 @@ button {
 
 .login-form {
 
+}
+
+*,
+*:before,
+*:after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+	-webkit-box-sizing: border-box; /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
+	-moz-box-sizing:    border-box; /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
+	box-sizing:         border-box;
 }

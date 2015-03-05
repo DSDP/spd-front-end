@@ -35,15 +35,15 @@ body {
 		position: relative;
 		display: block;
 		overflow: hidden;
-		height: 50px;
-		line-height: 50px;
+		height: 60px;
+		line-height: 60px;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		color: #4e5359;
 		border-bottom: 1px solid #ccc;
 		font-size: 16px;
 		font-weight: 600;
-		padding: 3px 17px;
+		padding: 0 17px;
 		text-decoration: none;
 		-moz-transition: all 0.2s ease-out;
 	    -webkit-transition: all 0.2s ease-out;
@@ -60,33 +60,33 @@ body {
 	overflow-y: scroll;
 	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
-	-webkit-transform: translate3d(300px, 0, 0);
-	transform: translate3d(300px, 0, 0);
-	-webkit-transition: -webkit-transform 0.3s;
-	transition: transform 0.3s;
+	margin-left: 300px;
+	transition: margin 0.3s ease-out;
 	overflow: hidden;
-	width: calc(100vw - 315px);
+	width: auto;
 	height: 100%;
 	padding: 56px 0 0 0;
 }
 
 .content {
-	padding: 0 0 0 30px;
+	padding: 0 30px 0 30px;
 }
+
+
 
 .content-bar {
 	position: fixed;
 	display: block;
-	width: calc(100vw - 315px);
+	margin-left: 300px;
+	width: 100%;
 	height: 56px;
 	border-bottom: 1px solid #f8f8f8;
 	background: #fff;
-	-webkit-transform: translate3d(300px, 0, 0);
 	z-index: 1;
 	padding: 0;
 }
 
-.breadcrumb {
+.breadcrumbs {
 	display: block;
 	margin: 0;
 	padding: 15px 0 0 15px;
@@ -103,6 +103,14 @@ body {
 		&:after {
 			content: ">";
 			color: #888;
+		}
+
+		&:last-child {
+			a {
+				color: #333;
+			   pointer-events: none;
+			   cursor: default;
+			}
 		}
 
 		&:last-child:after {
