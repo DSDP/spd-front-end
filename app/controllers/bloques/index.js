@@ -2,6 +2,9 @@ import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
 // setup our query params 
+  breadCrumb: "Listado",
+  breadCrumbPath: "bloques.index",
+  
   queryParams: ["page", "perPage", "nombre", 'tipo_camara'],
  
   // binding the property on the paged array  
