@@ -1,6 +1,11 @@
 import DRFSerializer from './drf';
 
 export default DRFSerializer.extend({
+	serializeIntoHash: function(hash, type, record, options) {
+		hash.id = record.get('id');
+		Ember.merge(hash, this.serialize(record, options));
+	},
+
 	extractMeta: function (store, type, payload) {
 		if (payload && payload.results) {
 	      // Sets the metadata for the type.

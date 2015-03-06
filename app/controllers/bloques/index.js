@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.ArrayController.extend({
 // setup our query params 
   breadCrumb: "Listado",
-  breadCrumbPath: "bloques.index",
+  breadCrumbPath: null,
   
   queryParams: ["page", "perPage", "nombre", 'tipo_camara'],
  

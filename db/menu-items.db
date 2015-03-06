@@ -2,3 +2,4 @@
 {"nombre":"About","icono":"info","link":"about","orden":1,"parent":null,"_id":"EFMYedSg08y0zGPn"}
 {"nombre":"Inicio","icono":"home","link":"index","orden":0,"parent":null,"_id":"WnvwhocpDTUnb1aR"}
 {"nombre":"Bloques","icono":"comments","link":"bloques.index","orden":2,"parent":null,"_id":"uCLx7BwEFW8j1LNL"}
+{"nombre":"Inicio","icono":"home","link":"index","orden":0,"parent":null,"_id":"WnvwhocpDTUnb1aR"}
