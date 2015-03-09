@@ -47,7 +47,25 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+### Custom components TO-DO
+- [ ] NavigationBar (Config in controller)
+- [ ] ActionBar (Config in controller)
+- [ ] Filter List (Integrate with queryParams)
+- [ ] Suggest imput (work with store)
+
+### Custom addons TO-DO
+- [ ] Notification (Server and client side)
+
+### Sparl Modules TO-DO
+- [ ] Direccion Secretaria
+- [ ] Direccion Comisiones
+- [ ] Informacion Parlamentaria
+- [ ] Ordenes del dia
+- [ ] Publicaciones
+- [ ] Labor Parlamentaria
+- [ ] Visitas Guiadas
+- [ ] Alerta Temprana
+- [ ] Administrador
 
 ## Further Reading / Useful Links
 
