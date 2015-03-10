@@ -1,0 +1,31 @@
+.pagination {
+	margin: 0;
+	background: #f1f1f1;
+	border: 1px solid #ddd;
+	display: block;
+	text-align: right;
+	padding: 10px 6px;
+
+	li {
+		display: inline-block;
+		min-width: 35px;
+		text-align: center;
+		cursor: pointer;
+		-webkit-transition: all 0.2s ease-out;
+		border-radius: 50px;
+
+		&:hover {
+			background: #ddd;
+		}
+
+		&.active {
+			color: $brand-color;
+			font-weight: 600;
+		}
+
+		a {
+			min-width: 35px;
+			display: block;
+		}
+	}
+}

@@ -78,12 +78,16 @@ body {
 	position: fixed;
 	display: block;
 	margin-left: 300px;
-	width: 100%;
+	width: auto;
 	height: 56px;
 	border-bottom: 1px solid #f8f8f8;
 	background: #fff;
 	z-index: 1;
 	padding: 0;
+	-webkit-transition: margin 0.3s ease-out;
+	transition: margin 0.3s ease-out;
+	left: 0;
+	right: 0;
 }
 
 .breadcrumbs {
@@ -130,5 +134,14 @@ body {
 		font-size: 12px;
 		font-family: $font-sans-caption;
 		color: #555;
+	}
+}
+
+
+@media screen and (max-width: 900px) {
+	.menu-wrap { -webkit-transform: translate3d(-300px, 0, 0); transform: translate3d(-300px, 0, 0); }	
+
+	.content-bar, .content-wrap {
+		margin-left: 0;
 	}
 }

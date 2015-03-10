@@ -104,6 +104,36 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src:url('fonts/icomoon.eot?-rp7g2s');
+  src:url('fonts/icomoon.eot?#iefix-rp7g2s') format('embedded-opentype'),
+    url('fonts/icomoon.woff?-rp7g2s') format('woff'),
+    url('fonts/icomoon.ttf?-rp7g2s') format('truetype'),
+    url('fonts/icomoon.svg?-rp7g2s#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-spd-zoom:before {
+  content: "\e600";
+}
+
+
 
 // Font Variables
 $font-sans: 'PT Sans', sans-serif;
