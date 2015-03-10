@@ -49,7 +49,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Addons to implement TO-DO
 - [X] [ember-document-title](https://github.com/paddle8/ember-document-title)
-- [ ] [ember-linkify](https://www.npmjs.com/package/ember-linkify)
+- [X] [ember-linkify](https://www.npmjs.com/package/ember-linkify)
 - [ ] [ember-cli-notifications](https://www.npmjs.com/package/ember-cli-notifications)
 - [ ] [ember-websockets](https://github.com/thoov/ember-websockets)
 - [ ] [ember-cli-google-analytics](https://www.npmjs.com/package/ember-cli-google-analytics)
