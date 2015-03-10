@@ -52,7 +52,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 - [ ] [ember-linkify](https://www.npmjs.com/package/ember-linkify)
 - [ ] [ember-cli-notifications](https://www.npmjs.com/package/ember-cli-notifications)
 - [ ] [ember-websockets](https://github.com/thoov/ember-websockets)
-- [ ] [ember-analytics](https://www.npmjs.com/package/ember-analytics)
+- [ ] [ember-cli-google-analytics](https://www.npmjs.com/package/ember-cli-google-analytics)
 - [ ] [ember-can](https://www.npmjs.com/package/ember-can)
 - [ ] [ember-intl](https://www.npmjs.com/package/ember-intl)
 - [ ] [ember-cli-admin](https://www.npmjs.com/package/ember-cli-admin)
