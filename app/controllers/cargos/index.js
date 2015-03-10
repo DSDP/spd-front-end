@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
+  breadCrumb: "Listado",
+  breadCrumbPath: null,
+    
 // setup our query params 
   queryParams: ["page", "perPage", "descripcion"],
  

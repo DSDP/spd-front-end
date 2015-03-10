@@ -4,7 +4,9 @@ import LoginControllerMixin from 'simple-auth/mixins/login-controller-mixin';
 export default Ember.Controller.extend(LoginControllerMixin, {
 	errorMessage: null,
 	errorDescription: null,
-	
+	breadCrumb: "Login",
+  	breadCrumbPath: "login",
+
 	authenticator: 'oauth-custom:oauth2-password-grant',
 	actions: {
       authenticate: function() {
