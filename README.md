@@ -47,6 +47,18 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
+### Addons to implement TO-DO
+- [ ] [ember-document-title](https://github.com/paddle8/ember-document-title)
+- [ ] [ember-linkify](https://www.npmjs.com/package/ember-linkify)
+- [ ] [ember-cli-notifications](https://www.npmjs.com/package/ember-cli-notifications)
+- [ ] [ember-websockets](https://github.com/thoov/ember-websockets)
+- [ ] [ember-analytics](https://www.npmjs.com/package/ember-analytics)
+- [ ] [ember-can](https://www.npmjs.com/package/ember-can)
+- [ ] [ember-intl](https://www.npmjs.com/package/ember-intl)
+- [ ] [ember-cli-admin](https://www.npmjs.com/package/ember-cli-admin)
+- [ ] [ember-cli-admin-auth](https://github.com/ember-admin/ember-cli-admin-auth)
+- [ ] [ember-attachable](https://www.npmjs.com/package/ember-attachable)
+
 ### Custom components TO-DO
 - [ ] NavigationBar (Config in controller)
 - [ ] ActionBar (Config in controller)
