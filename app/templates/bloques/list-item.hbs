@@ -1,7 +1,23 @@
 <li>
-  {{listFilterObject.nombre}}
-  {{listFilterObject.tipocamara}}
-  {{link-to "Edit" "bloques.edit" listFilterObject}}
-  {{link-to "Show" "bloques.show" listFilterObject}}
-  <a href="#" {{action "remove" listFilterObject}}>Remove</a>
+  <div class="item-description">
+	  <b>{{listFilterObject.tipocamara}}</b> - 
+	  <span>{{listFilterObject.nombre}}</span>
+  </div>
+
+  <div class="item-action">
+	  {{#link-to "bloques.edit" listFilterObject}}
+	  	{{fa-icon "pencil-square"}}
+	  	<span>Editar</span>
+	  {{/link-to}}
+
+	  {{#link-to "bloques.show" listFilterObject}}
+	  	{{fa-icon "pencil"}}
+	  	<span>Ver</span>
+	  {{/link-to}}
+	  
+	  <a href="#" {{action "remove" listFilterObject}}>
+	  	{{fa-icon "trash-o"}}
+	  	<span>Eliminar</span>
+	  </a>
+  </div>
 </li>

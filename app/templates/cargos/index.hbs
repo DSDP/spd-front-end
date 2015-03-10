@@ -1,17 +1,24 @@
 {{document-title title=controller.breadCrumb}}
-<h1>Cargos list</h1>
-
 <p>
   {{link-to "New Cargo" "cargos.new" }}
 </p>
-{{input type="text" value=descripcion}}
-<button {{action "refresh"}}> Buscar </button>
 
-{{#if controller.length}}
-  {{page-numbers content=content totalPages=pages}}
-  {{list-filter list=content partial='cargos/list-item' properties='descripcion' perPage=controller.perPage}}
-{{else}}
-  <p id="blankslate">
-    No Cargos found
-  </p>
-{{/if}}
+{{document-title title=controller.breadCrumb}}
+  <div class="table-list-filter">
+	  <div class="table-filter">
+		  {{input type="text" value=descripcion}}
+		  {{page-size perPage=perPage class="pull-right"}}
+		  <button {{action "refresh"}}> Buscar </button>
+	  </div>
+	{{#if controller.length}}
+	  <div class="list-filter">
+		  {{list-filter list=content partial='cargos/list-item' properties='descripcion' perPage=controller.perPage}}
+	  </div>
+	  {{page-numbers content=content totalPages=pages}}
+	{{else}}
+	  <p id="blankslate">
+	    No Bloques found
+	  </p>
+	{{/if}}
+  </div>
+

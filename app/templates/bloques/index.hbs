@@ -1,21 +1,23 @@
 {{document-title title=controller.breadCrumb}}
-
-<h1>Bloques list</h1>
-
 <p>
   {{link-to "New Bloque" "bloques.new" }}
 </p>
+  <div class="table-list-filter">
+	  <div class="table-filter">
+		  {{input type="text" value=tipo_camara class="pull-left" placeholder="Tipo de camara"}}
+	  	{{input type="text" value=nombre class="pull-left" placeholder="Nombre"}}
+		  {{page-size perPage=perPage class="pull-right"}}
+		  <button {{action "refresh"}}> Buscar </button>
+	  </div>
+	{{#if controller.length}}
+	  <div class="list-filter">
+		  {{list-filter list=content partial='bloques/list-item' properties='nombre tipocamara' perPage=controller.perPage}}
+	  </div>
+	  {{page-numbers content=content totalPages=pages}}
+	{{else}}
+	  <p id="blankslate">
+	    No Bloques found
+	  </p>
+	{{/if}}
+  </div>
 
-{{input type="text" value=nombre}}
-{{input type="text" value=tipo_camara}}
-<button {{action "refresh"}}> Buscar </button>
-
-{{#if controller.length}}
-  {{page-numbers content=content totalPages=pages}}
-  {{list-filter list=content partial='bloques/list-item' properties='nombre tipocamara' perPage=controller.perPage}}
-  {{page-numbers content=content totalPages=pages}}
-{{else}}
-  <p id="blankslate">
-    No Bloques found
-  </p>
-{{/if}}

@@ -1,3 +1,22 @@
 <li>
-  {{listFilterObject.descripcion}} {{link-to "Edit" "cargos.edit" listFilterObject}} {{link-to "Show" "cargos.show" listFilterObject}} <a href="#" {{action "remove" listFilterObject}}>Remove</a>
+  <div class="item-description">
+  	<span>{{listFilterObject.descripcion}}</span>
+  </div>
+
+  <div class="item-action">
+	  {{#link-to "cargos.edit" listFilterObject}}
+	  	{{fa-icon "pencil-square"}}
+	  	<span>Editar</span>
+	  {{/link-to}}
+
+	  {{#link-to "cargos.show" listFilterObject}}
+	  	{{fa-icon "pencil"}}
+	  	<span>Ver</span>
+	  {{/link-to}}
+	  
+	  <a href="#" {{action "remove" listFilterObject}}>
+	  	{{fa-icon "trash-o"}}
+	  	<span>Eliminar</span>
+	  </a>
+  </div>
 </li>
