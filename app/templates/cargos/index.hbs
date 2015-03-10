@@ -4,10 +4,11 @@
 <p>
   {{link-to "New Cargo" "cargos.new" }}
 </p>
+{{input type="text" value=descripcion}}
+<button {{action "refresh"}}> Buscar </button>
 
 {{#if controller.length}}
   {{page-numbers content=content totalPages=pages}}
-  {{input type="text" value=descripcion}}
   {{list-filter list=content partial='cargos/list-item' properties='descripcion' perPage=controller.perPage}}
 {{else}}
   <p id="blankslate">

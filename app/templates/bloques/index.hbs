@@ -6,10 +6,12 @@
   {{link-to "New Bloque" "bloques.new" }}
 </p>
 
+{{input type="text" value=nombre}}
+{{input type="text" value=tipo_camara}}
+<button {{action "refresh"}}> Buscar </button>
+
 {{#if controller.length}}
   {{page-numbers content=content totalPages=pages}}
-  {{input type="text" value=nombre}}
-  {{input type="text" value=tipo_camara}}
   {{list-filter list=content partial='bloques/list-item' properties='nombre tipocamara' perPage=controller.perPage}}
   {{page-numbers content=content totalPages=pages}}
 {{else}}

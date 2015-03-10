@@ -4,7 +4,7 @@ import RouteMixin from 'ember-cli-pagination/remote/route-mixin';
 export default Ember.Route.extend(RouteMixin, {
   queryParams: {
     descripcion: {
-      refreshModel: true
+      refreshModel: false
     },
   },
 
@@ -13,7 +13,10 @@ export default Ember.Route.extend(RouteMixin, {
       if(confirm('Are you sure?')) {
         model.destroyRecord();
       }
-    }
+    },
+    refresh: function ()  {
+      this.refresh();
+    },
   },
 
   model: function(params) {

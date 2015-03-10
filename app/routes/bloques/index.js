@@ -4,10 +4,10 @@ import RouteMixin from 'ember-cli-pagination/remote/route-mixin';
 export default Ember.Route.extend(RouteMixin, {
   queryParams: {
     nombre: {
-      refreshModel: true
+      refreshModel: false
     },
     tipo_camara: {
-      refreshModel: true
+      refreshModel: false
     }
   },
 
@@ -16,7 +16,10 @@ export default Ember.Route.extend(RouteMixin, {
       if(confirm('Are you sure?')) {
         model.destroyRecord();
       }
-    }
+    },
+    refresh: function ()  {
+      this.refresh();
+    },    
   },
 
   model: function(params) {
