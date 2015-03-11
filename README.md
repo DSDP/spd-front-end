@@ -48,6 +48,15 @@ Make use of the many generators for code, try `ember help generate` for more det
 ### Deploying
 
 ### Addons to implement TO-DO
+- [X] [ember-cli-yuidoc](https://github.com/cibernox/ember-cli-yuidoc)
+- [X] [ember-cli-font-awesome](https://www.npmjs.com/package/ember-cli-font-awesome)
+- [X] [ember-cli-html-minifier](https://www.npmjs.com/package/ember-cli-html-minifier)
+- [X] [ember-cli-loading](https://www.npmjs.com/package/ember-cli-loading)
+- [X] [ember-cli-moment](https://www.npmjs.com/package/ember-cli-moment)
+- [X] [ember-cli-pagination](https://www.npmjs.com/package/ember-cli-pagination)
+- [X] [ember-cli-simple-auth](https://www.npmjs.com/package/ember-cli-simple-auth)
+- [X] [ember-cli-simple-auth-oauth2](https://github.com/simplabs/ember-cli-simple-auth-oauth2)
+- [X] [ember-django-adapter](https://github.com/dustinfarris/ember-django-adapter)
 - [X] [ember-document-title](https://github.com/paddle8/ember-document-title)
 - [X] [ember-linkify](https://www.npmjs.com/package/ember-linkify)
 - [ ] [ember-cli-notifications](https://www.npmjs.com/package/ember-cli-notifications)
