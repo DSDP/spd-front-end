@@ -1,0 +1,36 @@
+<h1>Expedientes list</h1>
+
+<p>
+  {{link-to "New Expedientes" "expedientes.new" }}
+</p>
+
+{{#if controller.length}}
+  <table>
+    <thead>
+      <tr>
+        <th colspan="3">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each expedientes in controller}}
+        <tr>
+          <td>
+            {{link-to "Edit" "expedientes.edit" expedientes}}
+          </td>
+          <td>
+            {{link-to "Show" "expedientes.show" expedientes}}
+          </td>
+          <td>
+            <a href="#" {{action "remove" expedientes}}>Remove</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p id="blankslate">
+    No Expedientes found
+  </p>
+{{/if}}

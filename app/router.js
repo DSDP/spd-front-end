@@ -6,6 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('expedientes', function() {
+    this.route('new');
+    this.route('edit', { path: ':expedientes_id/edit' });
+    this.route('show', { path: ':expedientes_id' });
+  });
   this.resource('administrador', function () {
     this.resource('bloques', function() {
       this.route('new');
