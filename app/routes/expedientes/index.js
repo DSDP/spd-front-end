@@ -3,13 +3,7 @@ import RouteMixin from 'ember-cli-pagination/remote/route-mixin';
 
 export default Ember.Route.extend(RouteMixin, {
   queryParams: {
-    tipo: {
-      refreshModel: false
-    },
     tipo_proy: {
-      refreshModel: false
-    },
-    periodo: {
       refreshModel: false
     },
     fecha_desde: {
@@ -27,6 +21,54 @@ export default Ember.Route.extend(RouteMixin, {
     firm_apellido: {
       refreshModel: false
     },    
+    codigo_exp: {
+      refreshModel: false
+    },
+    codigo_num: {
+      refreshModel: false
+    },
+    codigo_origen: {
+      refreshModel: false
+    },
+    codigo_anio: {
+      refreshModel: false
+    },
+    sumario: {
+      refreshModel: false
+    },
+    tipo_camara: {
+      refreshModel: false
+    },
+    tipo: {
+      refreshModel: false
+    },
+    fecha_caducidad: {
+      refreshModel: false
+    },
+    fecha: {
+      refreshModel: false
+    },
+    titulo: {
+      refreshModel: false
+    },
+    voces: {
+      refreshModel: false
+    },
+    firmantes: {
+      refreshModel: false
+    },
+    giros: {
+      refreshModel: false
+    },
+    resultados: {
+      refreshModel: false
+    },
+    codigo_estado: {
+      refreshModel: false
+    },
+    periodo: {
+      refreshModel: false
+    },
   },
 
   actions: {

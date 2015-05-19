@@ -1,0 +1,36 @@
+<li>
+  <div class="item-description">
+	  <b>{{listFilterObject.codigo_exp}}</b> - 
+	  <span>{{listFilterObject.codigo_num}}</span>
+	  <span>{{listFilterObject.codigo_origen}}</span>
+	  <span>{{listFilterObject.codigo_anio}}</span>
+	  <span>{{listFilterObject.sumario}}</span>
+	  <span>{{listFilterObject.tipo_camara}}</span>
+	  <span>{{listFilterObject.tipo}}</span>
+	  <span>{{listFilterObject.fecha_caducidad}}</span>
+	  <span>{{listFilterObject.fecha}}</span>
+	  <span>{{listFilterObject.titulo}}</span>
+	  <span>{{listFilterObject.voces}}</span>
+	  <span>{{listFilterObject.firmantes}}</span>
+	  <span>{{listFilterObject.resultados}}</span>
+	  <span>{{listFilterObject.codigo_estado}}</span>
+	  <span>{{listFilterObject.periodo}}</span>
+  </div>
+
+  <div class="item-action">
+	  {{#link-to "expedientes.edit" listFilterObject}}
+	  	{{fa-icon "pencil-square"}}
+	  	<span>Editar</span>
+	  {{/link-to}}
+
+	  {{#link-to "expedientes.show" listFilterObject}}
+	  	{{fa-icon "pencil"}}
+	  	<span>Ver</span>
+	  {{/link-to}}
+	  
+	  <a href="#" {{action "remove" listFilterObject}}>
+	  	{{fa-icon "trash-o"}}
+	  	<span>Eliminar</span>
+	  </a>
+  </div>
+</li>
