@@ -2,8 +2,8 @@ import Authenticator from 'simple-auth-oauth2/authenticators/oauth2';
 
 export default Authenticator.extend({
     makeRequest: function(url, data) {
-        data.client_id = "5FbzJ9oU=9Db0y7s92SvuhSixxfU3Ajcwly2jNbb";
-        data.client_secret = "3KJtUIRd7=SgzpdTA?aeC5r9a8GkoF7rwCWufg5BXYTb9Pwlx_ef6NXbo.A3Fwn.1ok_8L8gSe_WDGJq_ZKn.D5y9MLAr9.T1j.IjT=exFT6q.3ox42g2RAjHle-KrHv";
+        data.client_id = "K2io5Bw;3B5wCYhRoRbz5ifsx@;WR-LfMqkdHfa?";
+        data.client_secret = "p!fY;iymLsP0IolSnkCAz6Tj;2:S?S6:od.q2ID7P.LaS87YBpWrmnUILE9u6gYwxvNuuX4dK8O=3L5cIHR5Xv.D=IXa3cmjl!S5aoNpskj.5puRWwAB7Rq97H@4o.@S";
         return this._super(url, data);
     }
 });
