@@ -1,4 +1,5 @@
 import DRFSerializer from './drf';
+import Ember from 'ember';
 
 export default DRFSerializer.extend({
 	serializeIntoHash: function(hash, type, record, options) {
