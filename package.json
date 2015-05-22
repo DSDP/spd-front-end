@@ -51,6 +51,7 @@
     "ember-linkify": "1.0.1",
     "ember-list-filter": "0.0.3",
     "glob": "^5.0.2",
+    "io.js": "0.0.0",
     "request": "2.55.0"
   },
   "dependencies": {

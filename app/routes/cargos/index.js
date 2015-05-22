@@ -6,6 +6,9 @@ export default Ember.Route.extend(RouteMixin, {
     descripcion: {
       refreshModel: false
     },
+    ordering: {
+      refreshModel: true
+    },
   },
 
   actions: {
@@ -16,6 +19,15 @@ export default Ember.Route.extend(RouteMixin, {
     },
     refresh: function ()  {
       this.refresh();
+    },
+    sortBy: function (newSortField){
+      var previousSortBy = this.controller.get('ordering');
+
+      if (newSortField === previousSortBy) {
+        return this.controller.set('ordering', "-" + this.controller.get('ordering'));
+      }else{
+        return this.controller.set('ordering', newSortField);    
+      }    
     },
   },
 

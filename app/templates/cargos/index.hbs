@@ -4,21 +4,22 @@
 </p>
 
 {{document-title title=controller.breadCrumb}}
-  <div class="table-list-filter">
-	  <div class="table-filter">
-		  {{input type="text" value=descripcion}}
-		  {{page-size perPage=perPage class="pull-right"}}
-		  <button {{action "refresh"}}> Buscar </button>
-	  </div>
-	{{#if controller.length}}
-	  <div class="list-filter">
-		  {{list-filter list=content partial='cargos/list-item' properties='descripcion' perPage=controller.perPage}}
-	  </div>
-	  {{page-numbers content=content totalPages=pages}}
-	{{else}}
-	  <p id="blankslate">
-	    No Bloques found
-	  </p>
-	{{/if}}
+<div class="table-list-filter">
+  <div class="table-filter">
+	  {{input type="text" value=descripcion}}
+	  {{page-size perPage=perPage class="pull-right"}}
+	  <button {{action "refresh"}}> Buscar </button>
   </div>
+{{#if controller.length}}
+  <a {{action "sortBy" "descripcion" }}>Descripcion</a>			
+  <div class="list-filter">
+	  {{list-filter list=content partial='cargos/list-item' properties='descripcion' perPage=controller.perPage}}
+  </div>
+  {{page-numbers content=content totalPages=pages}}
+{{else}}
+  <p id="blankslate">
+    No Bloques found
+  </p>
+{{/if}}
+</div>
 

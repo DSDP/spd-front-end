@@ -5,7 +5,7 @@ export default Ember.ArrayController.extend({
   breadCrumbPath: null,
     
 // setup our query params 
-  queryParams: ["page", "perPage", "descripcion"],
+  queryParams: ["page", "perPage", "descripcion","ordering"],
  
   // binding the property on the paged array  
   // to the query params on the controller 
@@ -19,7 +19,7 @@ export default Ember.ArrayController.extend({
   page: 1,
   perPage: 5,
   descripcion: '',
-  
+  ordering:'',
 
   perPageChanged: function () {
     this.set('page', 1);

@@ -41,7 +41,7 @@ export default Ember.ArrayController.extend({
   // set default values, can cause problems if left out 
   // if value matches default, it won't display in the URL 
   page: 1,
-  perPage: 5,
+  perPage: 50,
   fecha_desde: '',
   tipo_proy: '',
   fecha_hasta: '',
