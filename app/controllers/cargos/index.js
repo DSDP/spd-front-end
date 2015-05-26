@@ -20,6 +20,7 @@ export default Ember.ArrayController.extend({
   perPage: 5,
   descripcion: '',
   ordering:'',
+  descripcionIcon:'',
 
   perPageChanged: function () {
     this.set('page', 1);

@@ -11,7 +11,15 @@
 	  <button {{action "refresh"}}> Buscar </button>
   </div>
 {{#if controller.length}}
-  <a {{action "sortBy" "descripcion" }}>Descripcion</a>			
+  <div class="list-filter">
+		<ul>
+			<li>
+				<a {{action "sortBy" "descripcion" }}>
+		  		Descripcion {{fa-icon descripcionIcon size=1 fixedWidth=true}}
+	    	</a>
+    	</li>
+  	</ul>
+  </div>				
   <div class="list-filter">
 	  {{list-filter list=content partial='cargos/list-item' properties='descripcion' perPage=controller.perPage}}
   </div>

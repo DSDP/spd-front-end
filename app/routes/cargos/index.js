@@ -18,14 +18,25 @@ export default Ember.Route.extend(RouteMixin, {
       }
     },
     refresh: function ()  {
+      this.controller.set('page',1);
       this.refresh();
     },
     sortBy: function (newSortField){
       var previousSortBy = this.controller.get('ordering');
 
+      
+      if(this.controller.get(newSortField + "Type") === "numeric"){
+        this.controller.set(newSortField + "Icon", "fa-sort-numeric");
+      }else{
+        this.controller.set(newSortField + "Icon", "fa-sort-alpha"); 
+      }
+      
+
       if (newSortField === previousSortBy) {
+        this.controller.set(newSortField + "Icon", this.controller.get(newSortField + "Icon")  + "-desc");
         return this.controller.set('ordering', "-" + this.controller.get('ordering'));
       }else{
+        this.controller.set(newSortField + "Icon",  this.controller.get(newSortField + "Icon") + "-asc");
         return this.controller.set('ordering', newSortField);    
       }    
     },
