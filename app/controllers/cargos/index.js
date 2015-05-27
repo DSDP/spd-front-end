@@ -22,6 +22,23 @@ export default Ember.ArrayController.extend({
   ordering:'',
   descripcionIcon:'',
 
+  orderingChanged: function() {
+    var orderField = this.get('ordering');
+    var orderConfig = '-asc';
+    if(orderField.indexOf("-") >= 0){
+      orderField = orderField.replace("-",'');
+      orderConfig = '-desc';
+    }
+
+    if(this.get(orderField + "Type") === "numeric"){
+      this.set(orderField + "Icon", "fa-sort-numeric");
+    }else{
+      this.set(orderField + "Icon", "fa-sort-alpha"); 
+    }
+
+    this.set(orderField + 'Icon', this.get(orderField + 'Icon') + orderConfig);
+  }.observes('ordering'),
+
   perPageChanged: function () {
     this.set('page', 1);
   }.observes('perPage'),
