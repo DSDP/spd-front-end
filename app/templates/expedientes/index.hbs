@@ -4,40 +4,6 @@
   {{link-to "New Expedientes" "expedientes.new" }}
 </p>
 
-<<<<<<< HEAD
-  <div class="table-list-filter">
-    <div class="table-filter">
-      {{input type="text" value=codigo_exp class="pull-left" placeholder="Código de expediente"}}
-      {{input type="text" value=codigo_num class="pull-left" placeholder="Código Número"}}
-      {{input type="text" value=codigo_origen class="pull-left" placeholder="Código de Origen"}}
-      {{input type="text" value=codigo_anio class="pull-left" placeholder="Código de Año"}}
-      {{input type="text" value=sumario class="pull-left" placeholder="Sumario"}}
-      {{input type="text" value=tipo_camara class="pull-left" placeholder="Tipo Cámara"}}
-      {{input type="text" value=tipo class="pull-left" placeholder="Tipo"}}
-      {{input type="text" value=fecha_caducidad class="pull-left" placeholder="Fecha Caducidad"}}
-      {{input type="text" value=fecha class="pull-left" placeholder="Fecha"}}
-      {{input type="text" value=titulo class="pull-left" placeholder="Título"}}
-      {{input type="text" value=voces class="pull-left" placeholder="Voces"}}
-      {{input type="text" value=firmantes class="pull-left" placeholder="Firmantes"}}
-      {{input type="text" value=resultados class="pull-left" placeholder="Resultados"}}
-      {{input type="text" value=codigo_estado class="pull-left" placeholder="Código Estado"}}
-      {{input type="text" value=periodo class="pull-left" placeholder="Periodo"}}
-
-      {{page-size perPage=perPage class="pull-right"}}
-      <button {{action "refresh"}}> Buscar </button>
-    </div>
-  {{#if controller.length}}
-      <div class="list-filter">
-        {{list-filter list=content partial='expedientes/list-item' properties='codigo_exp codigo_num codigo_origen codigo_anio sumario tipo_camara tipo fecha_caducidad fecha titulo voces firmantes giros resultados codigo_estado periodo' perPage=controller.perPage}}
-      </div>
-    {{page-numbers content=content totalPages=pages}}
-  {{else}}
-    <p id="blankslate">
-      No se encontraron expedientes
-    </p>
-  {{/if}}
-  </div>
-=======
 <div class="table-list-filter">
   <div class="table-filter">
     <div class="col-md-3">{{input type="text" value=codigo_exp class="pull-left" placeholder="Código de expediente"}}</div>
@@ -93,4 +59,3 @@
   </p>
 {{/if}}
 </div>
->>>>>>> 92c6960151f0e13c23e45d00cfc0e15ed2f34f98
