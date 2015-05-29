@@ -69,6 +69,12 @@ export default Ember.Route.extend(RouteMixin, {
     periodo: {
       refreshModel: false
     },
+    page: {
+      refreshModel: true
+    },
+    perPage: {
+      refreshModel: true
+    },
   },
 
   actions: {
@@ -82,10 +88,13 @@ export default Ember.Route.extend(RouteMixin, {
     },    
   },
 
+  afterModel: function(expedientes) {
+    console.log(expedientes);
+  },
+
+
   model: function(params) {
-    // params is {page: 1, name: "Adam"} 
     params.paramMapping = {page: "page", perPage: "page_size" };
     return this.findPaged("expediente", params);
-    // server will receive params page=1, name=Adam 
   }  
 });

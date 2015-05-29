@@ -72,5 +72,5 @@ export default Ember.ArrayController.extend({
   pages: function () {
     return Math.ceil(this.get('totalPages') / this.get('perPage'));
   }.property('totalPages', 'total', 'perPage'),
-
+  
 });

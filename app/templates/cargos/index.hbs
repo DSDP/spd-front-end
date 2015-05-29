@@ -10,6 +10,7 @@
 	  {{page-size perPage=perPage class="pull-right"}}
 	  <button {{action "refresh"}}> Buscar </button>
   </div>
+  <div>Total: {{totalPages}}</div>
 {{#if controller.length}}
   <div class="list-filter">
 		<ul>

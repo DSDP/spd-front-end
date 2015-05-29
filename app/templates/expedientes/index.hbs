@@ -26,9 +26,9 @@
       <button {{action "refresh"}}> Buscar </button>
     </div>
   {{#if controller.length}}
-    <div class="list-filter">
-      {{list-filter list=content partial='expedientes/list-item' properties='codigo_exp codigo_num codigo_origen codigo_anio sumario tipo_camara tipo fecha_caducidad fecha titulo voces firmantes giros resultados codigo_estado periodo' perPage=controller.perPage}}
-    </div>
+      <div class="list-filter">
+        {{list-filter list=content partial='expedientes/list-item' properties='codigo_exp codigo_num codigo_origen codigo_anio sumario tipo_camara tipo fecha_caducidad fecha titulo voces firmantes giros resultados codigo_estado periodo' perPage=controller.perPage}}
+      </div>
     {{page-numbers content=content totalPages=pages}}
   {{else}}
     <p id="blankslate">

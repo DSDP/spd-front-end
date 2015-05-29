@@ -33,9 +33,7 @@ export default Ember.Route.extend(RouteMixin, {
   },
 
   model: function(params) {
-    // params is {page: 1, name: "Adam"} 
     params.paramMapping = {page: "page", perPage: "page_size" };
     return this.findPaged("cargo", params);
-    // server will receive params page=1, name=Adam 
   }  
 });
