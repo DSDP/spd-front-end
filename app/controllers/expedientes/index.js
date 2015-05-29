@@ -1,12 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-// setup our query params 
   breadCrumb: "Listado",
   breadCrumbPath: null,
   
-  queryParams: ["page", "perPage", "tipo_proy","fecha_desde","fecha_hasta","firm_orden","firm_cargo_pf_id","firm_apellido", "codigo_exp", "codigo_num", "codigo_origen", "codigo_anio", "sumario", "tipo_camara", "tipo", "fecha_caducidad", "fecha", "titulo", "voces", "firmantes", "giros", "resultados", "codigo_estado", "periodo"],
- 
+  // setup our query params
+  queryParams: ["page", "perPage", "tipo_proy","fecha_desde","fecha_hasta","firm_orden","firm_cargo_pf_id","firm_apellido", "codigo_exp", "codigo_num", "codigo_origen", "codigo_anio", "sumario", "tipo_camara", "tipo", "fecha_caducidad", "fecha", "titulo", "voces", "firmantes", "giros", "resultados", "codigo_estado", "periodo", "ordering"],
+
   // binding the property on the paged array  
   // to the query params on the controller 
   pageBinding: "content.page",
@@ -35,9 +35,6 @@ export default Ember.ArrayController.extend({
   codigo_estadoPagesBinding: "content.codigo_estado",
   periodoPagesBinding: "content.periodo",
 
-
-
-  
   // set default values, can cause problems if left out 
   // if value matches default, it won't display in the URL 
   page: 1,
@@ -48,6 +45,8 @@ export default Ember.ArrayController.extend({
   firm_orden: '',
   firm_cargo_pf_id: '',
   firm_apellido: '',
+  ordering:'',
+
   codigo_exp: '',
   codigo_num: '',
   codigo_origen: '',
@@ -64,6 +63,40 @@ export default Ember.ArrayController.extend({
   resultados: '',
   codigo_estado: '',
   periodo: '',
+
+  codigo_expIcon: '',
+  codigo_numIcon: '',
+  codigo_origenIcon: '',
+  codigo_anioIcon: '',
+  sumarioIcon: '',
+  tipo_camaraIcon: '',
+  tipoIcon: '',
+  fecha_caducidadIcon: '',
+  fechaIcon: '',
+  tituloIcon: '',
+  vocesIcon: '',
+  firmantesIcon: '',
+  girosIcon: '',
+  resultadosIcon: '',
+  codigo_estadoIcon: '',
+  periodoIcon: '',
+
+  orderingChanged: function() {
+    var orderField = this.get('ordering');
+    var orderConfig = '-asc';
+    if(orderField.indexOf("-") >= 0){
+      orderField = orderField.replace("-",'');
+      orderConfig = '-desc';
+    }
+
+    if(this.get(orderField + "Type") === "numeric"){
+      this.set(orderField + "Icon", "fa-sort-numeric");
+    }else{
+      this.set(orderField + "Icon", "fa-sort-alpha"); 
+    }
+
+    this.set(orderField + 'Icon', this.get(orderField + 'Icon') + orderConfig);
+  }.observes('ordering'),
 
   perPageChanged: function () {
     this.set('page', 1);

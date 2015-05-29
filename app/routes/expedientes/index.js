@@ -20,7 +20,7 @@ export default Ember.Route.extend(RouteMixin, {
     },
     firm_apellido: {
       refreshModel: false
-    },    
+    },
     codigo_exp: {
       refreshModel: false
     },
@@ -69,11 +69,16 @@ export default Ember.Route.extend(RouteMixin, {
     periodo: {
       refreshModel: false
     },
+<<<<<<< HEAD
     page: {
       refreshModel: true
     },
     perPage: {
       refreshModel: true
+=======
+    ordering: {
+      refreshModel: false
+>>>>>>> 92c6960151f0e13c23e45d00cfc0e15ed2f34f98
     },
   },
 
@@ -85,7 +90,16 @@ export default Ember.Route.extend(RouteMixin, {
     },
     refresh: function ()  {
       this.refresh();
-    },    
+    },
+    sortBy: function (newSortField){
+      var previousSortBy = this.controller.get('ordering');
+      
+      if (newSortField === previousSortBy) {
+        return this.controller.set('ordering', "-" + this.controller.get('ordering'));
+      }else{
+        return this.controller.set('ordering', newSortField);    
+      }    
+    },
   },
 
   afterModel: function(expedientes) {
