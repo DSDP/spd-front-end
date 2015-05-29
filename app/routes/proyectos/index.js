@@ -101,13 +101,13 @@ export default Ember.Route.extend(RouteMixin, {
     },
   },
 
-  afterModel: function(expedientes) {
-    console.log(expedientes);
+  afterModel: function(proyectos) {
+    console.log(proyectos);
   },
 
 
   model: function(params) {
     params.paramMapping = {page: "page", perPage: "page_size" };
-    return this.findPaged("expediente", params);
+    return this.findPaged("proyecto", params);
   }  
 });

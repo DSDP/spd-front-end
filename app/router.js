@@ -6,10 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('expedientes', function() {
+  this.resource('proyectos', function() {
     this.route('new');
-    this.route('edit', { path: ':expedientes_id/edit' });
-    this.route('show', { path: ':expedientes_id' });
+    this.route('edit', { path: ':proyectos_id/edit' });
+    this.route('show', { path: ':proyectos_id' });
   });
   this.resource('administrador', function () {
     this.resource('bloques', function() {

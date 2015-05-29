@@ -3,6 +3,6 @@ import SaveModelMixin from '../../mixins/save-model-mixin';
 
 export default Ember.Route.extend(SaveModelMixin, {
   model: function() {
-    return this.store.createRecord('expedientes');
+    return this.store.createRecord('proyectos');
   }
 });

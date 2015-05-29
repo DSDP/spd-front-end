@@ -1,7 +1,7 @@
 {{document-title title=controller.breadCrumb}}
 
 <p>
-  {{link-to "New Expedientes" "expedientes.new" }}
+  {{link-to "New Proyectos" "proyectos.new" }}
 </p>
 
 <div class="table-list-filter">
@@ -50,12 +50,12 @@
     </ul>
   </div>  
   <div class="list-filter">
-    {{list-filter list=content partial='expedientes/list-item' properties='codigo_exp codigo_num codigo_origen codigo_anio sumario tipo_camara tipo fecha_caducidad fecha titulo voces firmantes giros resultados codigo_estado periodo' perPage=controller.perPage}}
+    {{list-filter list=content partial='proyectos/list-item' properties='codigo_exp codigo_num codigo_origen codigo_anio sumario tipo_camara tipo fecha_caducidad fecha titulo voces firmantes giros resultados codigo_estado periodo' perPage=controller.perPage}}
   </div>
   {{page-numbers content=content totalPages=pages}}
 {{else}}
   <p id="blankslate">
-    No se encontraron expedientes
+    No se encontraron proyectos
   </p>
 {{/if}}
 </div>
