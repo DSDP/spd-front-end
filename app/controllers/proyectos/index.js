@@ -5,7 +5,7 @@ export default Ember.ArrayController.extend({
   breadCrumbPath: null,
   
   // setup our query params
-  queryParams: ["page", "perPage", "tipo_proy","fecha_desde","fecha_hasta","firm_orden","firm_cargo_pf_id","firm_apellido", "codigo_exp", "codigo_num", "codigo_origen", "codigo_anio", "sumario", "tipo_camara", "tipo", "fecha_caducidad", "fecha", "titulo", "voces", "firmantes", "giros", "resultados", "codigo_estado", "periodo", "ordering"],
+  queryParams: ["page", "perPage", "tipo_proy","fecha_desde","fecha_hasta","firm_orden","firm_cargo_pf_id","firm_apellido", "codigo_exp", "codigo_num", "codigo_origen", "codigo_anio", "sumario", "tipo_camara", "tipo", "fecha_caducidad", "fecha", "titulo", "voces", "firmantes", "giros", "resultados", "codigo_estado", "periodo", "ordering", "search"],
 
   // binding the property on the paged array  
   // to the query params on the controller 
@@ -34,6 +34,7 @@ export default Ember.ArrayController.extend({
   resultadosPagesBinding: "content.resultados",
   codigo_estadoPagesBinding: "content.codigo_estado",
   periodoPagesBinding: "content.periodo",
+  searchPagesBinding: "content.search",
 
   // set default values, can cause problems if left out 
   // if value matches default, it won't display in the URL 
@@ -63,6 +64,7 @@ export default Ember.ArrayController.extend({
   resultados: '',
   codigo_estado: '',
   periodo: '',
+  search: '',
 
   codigo_expIcon: '',
   codigo_numIcon: '',
@@ -105,5 +107,4 @@ export default Ember.ArrayController.extend({
   pages: function () {
     return Math.ceil(this.get('totalPages') / this.get('perPage'));
   }.property('totalPages', 'total', 'perPage'),
-  
 });

@@ -1,8 +1,7 @@
 {"nombre":"Cargos","icono":"tags","link":"cargos.index","orden":3,"parent":"q3KhnICTWA0AAq4f","_id":"8l9pCS0xHWF5ci7m"}
 {"nombre":"Menus","icono":"","link":"menu-items","orden":5,"parent":"q3KhnICTWA0AAq4f","_id":"DWcwvQmGZzGf2JmW"}
 {"nombre":"About","icono":"info","link":"about","orden":1,"parent":null,"_id":"EFMYedSg08y0zGPn"}
-{"nombre":"Expedientes","icono":"","link":"expedientes","orden":1,"parent":null,"_id":"PSRQSEF5vc5h7J2T"}
+{"nombre":"Proyectos","icono":"","link":"proyectos","orden":1,"parent":null,"_id":"PSRQSEF5vc5h7J2T"}
 {"nombre":"Inicio","icono":"home","link":"index","orden":0,"parent":null,"_id":"WnvwhocpDTUnb1aR"}
 {"nombre":"Administrador","icono":"home","link":"administrador","orden":5,"parent":null,"_id":"q3KhnICTWA0AAq4f"}
 {"nombre":"Bloques","icono":"comments","link":"bloques.index","orden":2,"parent":"q3KhnICTWA0AAq4f","_id":"uCLx7BwEFW8j1LNL"}
-{"nombre":"Proyectos","icono":"","link":"proyectos","orden":1,"parent":null,"_id":"PSRQSEF5vc5h7J2T"}

@@ -3,6 +3,9 @@ import RouteMixin from 'ember-cli-pagination/remote/route-mixin';
 
 export default Ember.Route.extend(RouteMixin, {
   queryParams: {
+    search: {
+      refreshModel: false
+    },
     tipo_proy: {
       refreshModel: false
     },
@@ -109,5 +112,5 @@ export default Ember.Route.extend(RouteMixin, {
   model: function(params) {
     params.paramMapping = {page: "page", perPage: "page_size" };
     return this.findPaged("proyecto", params);
-  }  
+  },
 });

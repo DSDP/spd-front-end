@@ -25,7 +25,21 @@
     
     {{page-size perPage=perPage class="pull-right"}}
     <button {{action "refresh"}}> Buscar </button>
+
   </div>
+
+<p style="clear:both;"></p>
+
+  <div class="table-list-filter">
+    <div class="table-filter">
+      <div class="col-md-3">{{input type="text" value=search placeholder="Buscar" class="pull-left"}}</div>
+
+      <div>Cantidad de resultados: {{totalPages}}</div>
+    </div>
+  </div>
+
+<p style="clear:both;"></p>
+
 {{#if controller.length}}
   <div class="list-filter">
     <ul>

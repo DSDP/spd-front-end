@@ -17,4 +17,5 @@ export default DS.Model.extend({
 	resultados: DS.attr('string'),
 	codigo_estado: DS.attr(),
 	periodo: DS.attr(),
+	search: DS.attr('string'),
 });
