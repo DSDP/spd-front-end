@@ -12,7 +12,7 @@ export default DS.Model.extend({
 	fecha: DS.attr('date'),
 	titulo: DS.attr('string'),
 	voces: DS.attr('string'),
-	firmantes: DS.attr('string'),
+	firmantes: DS.hasMany('firmantes', {async: true}),
 	giros: DS.attr('string'),
 	resultados: DS.attr('string'),
 	codigo_estado: DS.attr(),

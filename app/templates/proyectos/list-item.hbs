@@ -11,7 +11,11 @@
 	  <span>{{listFilterObject.fecha}}</span>
 	  <span>{{listFilterObject.titulo}}</span>
 	  <span>{{listFilterObject.voces}}</span>
-	  <span>{{listFilterObject.firmantes}}</span>
+	  {{#if listFilterObject.firmantes.isPending}}
+			cargando firmante...
+		{{else}}
+			{{listFilterObject.firmantes.firstObject.nombre_leg_func}}
+		{{/if}}
 	  <span>{{listFilterObject.resultados}}</span>
 	  <span>{{listFilterObject.codigo_estado}}</span>
 	  <span>{{listFilterObject.periodo}}</span>
