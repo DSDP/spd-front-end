@@ -22,8 +22,8 @@
     <div class="col-md-3">{{input type="text" value=resultados class="pull-left" placeholder="Resultados"}}</div>
     <div class="col-md-3">{{input type="text" value=codigo_estado class="pull-left" placeholder="Código Estado"}}</div>
     <div class="col-md-3">{{input type="text" value=periodo class="pull-left" placeholder="Periodo"}}</div>
-    
-    {{page-size perPage=perPage class="pull-right"}}
+
+    {{page-size page_size=page_size  content=content  loading=controller.loading store=store model='proyecto' class="pull-right"}}
     <button {{action "refresh"}}> Buscar </button>
 
   </div>
@@ -33,8 +33,8 @@
   <div class="table-list-filter">
     <div class="table-filter">
       <div class="col-md-3">{{input type="text" value=search placeholder="Buscar" class="pull-left"}}</div>
-
-      <div>Cantidad de resultados: {{totalPages}}</div>
+      <button {{action "refresh"}}> Buscar </button>
+       <div>Cantidad de resultados: {{totalPages}}</div>
     </div>
   </div>
 
@@ -63,10 +63,16 @@
       </li>
     </ul>
   </div>  
+  {{#if controller.loading}}
+    {{loading-spin color='black' size=25}}
+  {{else}} 
   <div class="list-filter">
-    {{list-filter list=content partial='proyectos/list-item' properties='codigo_exp codigo_num codigo_origen codigo_anio sumario tipo_camara tipo fecha_caducidad fecha titulo voces firmantes giros resultados codigo_estado periodo' perPage=controller.perPage}}
+    {{list-filter list=contentFiltered partial='proyectos/list-item' properties='codigo_exp codigo_num codigo_origen codigo_anio sumario tipo_camara tipo fecha_caducidad fecha titulo voces firmantes giros resultados codigo_estado periodo' perPage=controller.perPage}}
   </div>
-  {{page-numbers content=content totalPages=pages}}
+  {{/if}}
+  
+  {{pages-numbers content=content loading=controller.loading store=store model='proyecto'}}
+
 {{else}}
   <p id="blankslate">
     No se encontraron proyectos

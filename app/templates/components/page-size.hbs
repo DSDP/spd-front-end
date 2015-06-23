@@ -1,1 +1,5 @@
-{{view 'select' content=sizes selection=perPage}}
+<select>
+	{{#each size in sizes}}
+		<option {{action 'click' size}}>{{size}}</option>
+	{{/each}}
+</select>

@@ -5,12 +5,12 @@ export default Ember.ArrayController.extend({
   breadCrumbPath: null,
   
   // setup our query params
-  queryParams: ["page", "perPage", "tipo_proy","fecha_desde","fecha_hasta","firm_orden","firm_cargo_pf_id","firm_apellido", "codigo_exp", "codigo_num", "codigo_origen", "codigo_anio", "sumario", "tipo_camara", "tipo", "fecha_caducidad", "fecha", "titulo", "voces", "firmantes", "giros", "resultados", "codigo_estado", "periodo", "ordering", "search"],
+  queryParams: ["search", "page", "page_size", "tipo_proy","fecha_desde","fecha_hasta","firm_orden","firm_cargo_pf_id","firm_apellido", "codigo_exp", "codigo_num", "codigo_origen", "codigo_anio", "sumario", "tipo_camara", "tipo", "fecha_caducidad", "fecha", "titulo", "voces", "firmantes", "giros", "resultados", "codigo_estado", "periodo", "ordering"],
 
   // binding the property on the paged array  
-  // to the query params on the controller 
+  // to the query params on the controller   
   pageBinding: "content.page",
-  perPageBinding: "content.perPage",
+  page_sizeBinding: "content.page_size",
   totalPagesBinding: "content.totalPages",
   tipo_proyPagesBinding: "content.tipo_proy",
   fecha_desdePagesBinding: "content.fecha_desde",
@@ -35,11 +35,16 @@ export default Ember.ArrayController.extend({
   codigo_estadoPagesBinding: "content.codigo_estado",
   periodoPagesBinding: "content.periodo",
   searchPagesBinding: "content.search",
+  searchTextBinding: "content.searchText",
 
   // set default values, can cause problems if left out 
   // if value matches default, it won't display in the URL 
+  next: '',
+  previous: '',
+  count: '',
+
   page: 1,
-  perPage: 50,
+  page_size: 5,
   fecha_desde: '',
   tipo_proy: '',
   fecha_hasta: '',
@@ -83,6 +88,8 @@ export default Ember.ArrayController.extend({
   codigo_estadoIcon: '',
   periodoIcon: '',
 
+  searchText: '',
+
   orderingChanged: function() {
     var orderField = this.get('ordering');
     var orderConfig = '-asc';
@@ -98,13 +105,18 @@ export default Ember.ArrayController.extend({
     }
 
     this.set(orderField + 'Icon', this.get(orderField + 'Icon') + orderConfig);
+
   }.observes('ordering'),
 
   perPageChanged: function () {
     this.set('page', 1);
-  }.observes('perPage'),
+  }.observes('page_size'),
 
   pages: function () {
-    return Math.ceil(this.get('totalPages') / this.get('perPage'));
-  }.property('totalPages', 'total', 'perPage'),
+    return Math.ceil(this.get('totalPages') / this.get('page_size'));
+  }.property('totalPages', 'total', 'page_size'),
+
+  contentFiltered: function(){
+    return this.get('content');
+  }.property('page','content.@each', 'next', 'previous'),
 });
