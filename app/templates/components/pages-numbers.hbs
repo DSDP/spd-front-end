@@ -1,0 +1,30 @@
+{{#if view.showPages}}
+<div class="pagination-centered">
+  <ul class="pagination cd-pagination no-space">
+	{{#if canPreviousPage}}
+      <li class="arrow prev enabled-arrow">
+		<a {{action "changePage" previousPage}} >&laquo;</a>
+      </li>
+	{{/if}}
+
+  	{{#each pageItem in pagesItems}}
+      {{#if pageItem.current}}
+        <li class="active page-number">
+          <a>{{pageItem.number}}</a>
+        </li>
+      {{else}}
+        <li class="page-number">
+			<a {{action "changePage" pageItem.number}}>{{pageItem.number}}</a>
+        </li>
+       {{/if}}
+  	{{/each}}
+
+	{{#if canNextPage}}
+      <li class="arrow next enabled-arrow">
+		<a {{action "changePage" nextPage}} >&raquo;</a>
+      </li>
+	{{/if}}
+  </ul>
+</div>
+{{/if}}
+
