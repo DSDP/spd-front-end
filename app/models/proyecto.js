@@ -12,10 +12,15 @@ export default DS.Model.extend({
 	fecha: DS.attr('date'),
 	titulo: DS.attr('string'),
 	voces: DS.attr('string'),
-	firmantes: DS.hasMany('firmantes', {async: true}),
+	//firmantes: DS.hasMany('firmantes', {async: true}),
 	giros: DS.attr('string'),
 	resultados: DS.attr('string'),
 	codigo_estado: DS.attr(),
 	periodo: DS.attr(),
 	search: DS.attr('string'),
+	ordering: DS.attr('string'),
+
+	label: function(){
+		return this.get('codigo_exp');
+	}.property('codigo_exp')
 });

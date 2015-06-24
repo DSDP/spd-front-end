@@ -28,11 +28,12 @@ Router.map(function() {
       this.route('show', { path: ':menu-item_id' });
     });    
   });
-  
+
   this.route("login");
   this.route("about");
   this.route("error");
   this.route("catchall", {path: '/*wildcard'});
+  this.route('widgets');
 });
 
 export default Router;

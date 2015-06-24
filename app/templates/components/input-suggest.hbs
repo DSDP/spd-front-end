@@ -1,0 +1,39 @@
+<div class="container-fluid">
+	<div class="row col-md-4">
+		<div class="row">
+			{{input type="text" valueBinding="view.text" placeholder=view.placeholder on="enter" action="addFirstItem" maxlength=50 minlength=view.threshold}}
+		</div>
+
+		{{#if view.showResults}}
+			<div class="row">
+			  {{#if results.isPending}}
+			    {{loading-spin color='black' size=25}}
+			  {{else}} 
+					<ul class="list-group">
+						{{#each item in results}}
+							<a class="list-group-item" {{action view.typeAction item}}>{{item.label}}</a>
+						{{/each}}
+					</ul>
+			  {{/if}}
+			</div>
+		{{/if}}
+
+		{{#if view.listSelected}}
+		<div class="row">
+			<ul class="list-group">
+				{{#each item in view.listSelected}}
+						{{#if view.canEdit}}
+						  <li class="list-group-item" {{action 'removeItem' item}}>
+						  	<span>{{item.label}}</span>
+
+						  	<span class="glyphicon glyphicon-remove pull-right"></span>
+						  </li>
+						{{else}}
+						  <li class="list-group-item">{{item.label}}</li>
+						{{/if}}
+				{{/each}}
+			</ul>
+		</div>
+		{{/if}}
+	</div>
+</div>
