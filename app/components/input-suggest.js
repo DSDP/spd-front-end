@@ -20,7 +20,7 @@ export default Ember.Component.extend({
 
   actions:{
 		addFirstItem: function(){
-	  	if(this.get('text').length > this.get('threshold') && this.get('results.isFulfilled') == true)
+	  	if(this.get('text').length > this.get('threshold') && this.get('results.isFulfilled') === true)
 	  	{
 				var firstObject = this.get('results.firstObject');
 				var item 				= this.get('content').findProperty('id', firstObject.id);

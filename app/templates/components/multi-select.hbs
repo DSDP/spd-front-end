@@ -1,0 +1,47 @@
+<div class="container-fluid">
+	<div class="row col-md-12">
+		<div class="row col-md-5">
+			<div class="row col-md-12">
+				{{input type="text" valueBinding="view.filterText" placeholder=view.placeholder on="enter" action="clickItem" maxlength=50 minlength=view.threshold}}
+			</div>
+
+			<div class="row col-md-12">
+				<ul class="list-group">
+					{{#each item in listFiltered}}
+						<li>
+							<a class="list-group-item">
+								<span {{action "clickItem" item}}>{{item.label}}</span>
+								
+								{{#if view.showArrows}}
+									<span {{action "upItem" item}} class="glyphicon glyphicon-chevron-up"></span>
+									<span {{action "downItem" item}} class="glyphicon glyphicon-chevron-down"></span>
+								{{/if}}
+							</a>
+						</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+
+		<div class="row col-md-5">
+			<div class="row col-md-12">
+				{{input type="text" valueBinding="view.filterTextSelect" placeholder=view.placeholder on="enter" action="clickItemSelected" maxlength=50 minlength=view.threshold}}
+			</div>
+
+			<div class="row col-md-12">
+				<ul class="list-group">
+					{{#each item in view.listFilteredSelected}}
+					  <li class="list-group-item">
+								<span {{action "clickItem" item}}>{{item.label}}</span>
+
+								{{#if view.showArrows}}
+									<span {{action "upItem" item}} class="glyphicon glyphicon-chevron-up"></span>
+									<span {{action "downItem" item}} class="glyphicon glyphicon-chevron-down"></span>
+								{{/if}}
+					  </li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
